@@ -1,0 +1,334 @@
+/* 全局样式 */
+body {
+  font-family: "Verdana", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.4; /* 调整行高，让文本更紧凑 */
+  background-color: #ffffff;
+}
+
+/* 容器 */
+.container {
+  width: 95%;
+  max-width: 1100px; /* 减少最大宽度，使页面更加紧凑 */
+  margin: 0 auto;
+  padding: 10px; /* 缩小容器的内边距 */
+}
+
+/* 导航栏 */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fefefe; /* 亮色背景 */
+  color: #333;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px; /* 更小的导航栏内边距 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-right: 2em;
+}
+.navbar-toggle {
+  display: none; /* 显示汉堡按钮 */
+}
+.school-logo {
+  max-height: 40px; /* 更小的 Logo */
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin: 0 10px; /* 减小导航项之间的间距 */
+  position: relative;
+}
+
+.nav-list a {
+  padding: 8px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px; /* 更小的字体 */
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover,
+.nav-list li.active a {
+  color: #2a3d66;
+}
+
+.nav-list li.active {
+  background-color: rgba(42, 61, 102, 0.1); /* 点击后的背景色 */
+  border-radius: 6px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .section{
+    width: 100% !important;
+  }
+  /* 使 .about-container 的布局变为垂直排列 */
+  .about-container {
+    flex-direction: column; /* 设置为垂直方向排列 */
+    margin-bottom: 10px !important;
+  }
+
+  .about-left {
+    width: 100%; /* 调整宽度以适应小屏幕 */
+    max-width: 600px; /* 限制最大宽度，避免内容过宽 */
+  }
+  .about-right {
+    width: 100% !important;
+    text-align: center;
+  }
+  .about-left {
+    margin-right: 0 !important; /* 取消右边距 */
+    margin-bottom: 20px; /* 添加底部间距，让左侧和右侧部分之间有间隔 */
+  }
+  /* 隐藏导航项，显示 Logo */
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffcb77;
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .nav-list li {
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar-container {
+    justify-content: space-between;
+  }
+  .navbar-toggle {
+    display: block; /* 显示汉堡按钮 */
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: auto;
+    color: #333;
+  }
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 60px; /* 设置导航菜单下方的间距 */
+    left: 0;
+    width: 100%;
+    background-color: #fefefe;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    padding-top: 10px;
+  }
+
+  .nav-list li {
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%; /* 让菜单项占满宽度 */
+  }
+
+  /* 菜单展开时的样式 */
+  .nav-list.open {
+    display: flex;
+    flex-direction: column; /* 菜单项垂直排列 */
+  }
+
+  /* 菜单按钮样式 */
+  .navbar-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    color: #333;
+    z-index: 1001;
+  }
+
+  .navbar-container {
+    justify-content: space-between;
+  }
+  .navbar.open .navbar-toggle {
+    color: #ffcb77; /* 汉堡按钮的颜色变化 */
+  }
+  .navbar {
+    padding: 10px 15px; /* 更小的导航栏内边距 */
+  }
+
+  .school-logo {
+    max-height: 30px; /* 更小的 Logo */
+  }
+}
+
+.nav-list.open {
+  display: flex;
+}
+
+/* About Me Section */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px; /* 更紧凑的间距 */
+}
+
+.about-left {
+  width: 30%;
+}
+
+.profile-picture {
+  width: 80%; /* 保持头像容器的大小 */
+  height: 100%; /* 高度和宽度一致 */
+  max-width: 180px; /* 更小的头像 */
+  max-height: 200px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  transition: transform 0.3s ease;
+  margin-left: 0; /* 去除多余的左边距 */
+}
+
+.about-right {
+  width: 60%;
+}
+
+.about-right a {
+  text-decoration: none;
+  color: #5c64ff;
+}
+
+.about-right span:first-of-type {
+  font-weight: bolder;
+  font-size: 32px; /* 稍微减小字体 */
+  color: #3b77f8;
+}
+
+.about-right span:nth-of-type(2) {
+  font-weight: bolder;
+  font-size: 32px; /* 稍微减小字体 */
+  color: #ff7c7c;
+}
+
+.social-links a {
+  margin-right: 10px;
+  font-size: 16px; /* 更小的社交图标字体 */
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffcb77;
+}
+
+/* 模块通用样式 */
+.section {
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 50%;
+  padding: 20px 0; /* 调整上下的间距 */
+}
+
+h2 {
+  font-size: 24px; /* 稍微减小标题字体 */
+  color: #2600ffc5;
+  margin-bottom: 10px;
+  margin-top: auto;
+  margin-left: 2.5%;
+  font-weight: 600;
+}
+
+/* 卡片样式 */
+.card {
+  background-color: #f8faff;
+  padding: 15px;
+  border-radius: 10px; /* 较圆的卡片 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-time {
+  /* position: absolute; */
+  /* top: 5px;
+  right: 15px; */
+  font-size: 14px;
+  font-weight: bold;
+  color: #f39c12;
+  margin-right: 10px;
+}
+
+.card-paper {
+  font-size: 16px;
+  color: #000000;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  /* font-weight: bold; */
+  margin-right: 10px;
+}
+
+.card p {
+  color: #777;
+  font-size: 14px;
+}
+
+.card-icon {
+  font-size: 24px;
+  color: #ffcb77;
+  margin-right: 10px;
+}
+
+/* 反向渐变背景 */
+.card-background {
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.1),
+    rgba(46, 204, 113, 0.1)
+  );
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* 页脚 */
+footer {
+  text-align: center;
+  padding: 10px 0; /* 减小页脚的高度 */
+  background-color: #2a3d66;
+  color: white;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* 新增：显示名字 */
+.name-container {
+  flex-grow: 1;
+}
+
+.name {
+  font-size: 28px; /* 更大的字体 */
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* #awards li::marker {
+  content: " ❤ ";
+  color: red;
+} */
