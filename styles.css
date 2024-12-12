@@ -11,9 +11,9 @@ body {
 /* 容器 */
 .container {
   width: 95%;
-  max-width: 1100px; /* 减少最大宽度，使页面更加紧凑 */
+  max-width: 800px;
   margin: 0 auto;
-  padding: 10px; /* 缩小容器的内边距 */
+  padding: 10px;
 }
 
 /* 导航栏 */
@@ -78,7 +78,7 @@ body {
 
 /* 响应式调整 */
 @media (max-width: 768px) {
-  .section{
+  .section {
     width: 100% !important;
   }
   /* 使 .about-container 的布局变为垂直排列 */
@@ -86,19 +86,11 @@ body {
     flex-direction: column; /* 设置为垂直方向排列 */
     margin-bottom: 10px !important;
   }
+  /* .about-top{
+    display: flex;
+    flex-direction: column;
+  } */
 
-  .about-left {
-    width: 100%; /* 调整宽度以适应小屏幕 */
-    max-width: 600px; /* 限制最大宽度，避免内容过宽 */
-  }
-  .about-right {
-    width: 100% !important;
-    text-align: center;
-  }
-  .about-left {
-    margin-right: 0 !important; /* 取消右边距 */
-    margin-bottom: 20px; /* 添加底部间距，让左侧和右侧部分之间有间隔 */
-  }
   /* 隐藏导航项，显示 Logo */
   .nav-list {
     display: none;
@@ -181,42 +173,56 @@ body {
 /* About Me Section */
 .about-container {
   display: flex;
+  flex-direction: column; /* 设置为垂直方向排列 */
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px; /* 更紧凑的间距 */
 }
 
-.about-left {
-  width: 30%;
+.about-top-left {
+  width: 40%;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  /* background-color: #000000; */
+}
+.about-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+.about-bottom {
+  width: 100%;
 }
 
 .profile-picture {
-  width: 80%; /* 保持头像容器的大小 */
-  height: 100%; /* 高度和宽度一致 */
-  max-width: 180px; /* 更小的头像 */
+  width: 80%;
+  height: 100%;
+  max-width: 180px;
   max-height: 200px;
   border-radius: 50%;
   border: 5px solid #fff;
   transition: transform 0.3s ease;
-  margin-left: 0; /* 去除多余的左边距 */
 }
 
-.about-right {
+.about-top-right {
   width: 60%;
 }
 
-.about-right a {
+.about-top-right a {
   text-decoration: none;
   color: #5c64ff;
 }
 
-.about-right span:first-of-type {
+.about-top-right span:first-of-type {
   font-weight: bolder;
   font-size: 32px; /* 稍微减小字体 */
   color: #3b77f8;
 }
 
-.about-right span:nth-of-type(2) {
+.about-top-right span:nth-of-type(2) {
   font-weight: bolder;
   font-size: 32px; /* 稍微减小字体 */
   color: #ff7c7c;
@@ -236,9 +242,7 @@ body {
 /* 模块通用样式 */
 .section {
   margin: 0 auto;
-  margin-top: 10px;
-  width: 50%;
-  padding: 20px 0; /* 调整上下的间距 */
+  width: 100%;
 }
 
 h2 {
@@ -246,7 +250,7 @@ h2 {
   color: #2600ffc5;
   margin-bottom: 10px;
   margin-top: auto;
-  margin-left: 2.5%;
+  margin-left: 0;
   font-weight: 600;
 }
 
@@ -265,9 +269,6 @@ h2 {
 }
 
 .card-time {
-  /* position: absolute; */
-  /* top: 5px;
-  right: 15px; */
   font-size: 14px;
   font-weight: bold;
   color: #f39c12;

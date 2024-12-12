@@ -33,6 +33,12 @@
                   >Publications</a
                 >
               </li>
+              <li>
+                <a href="#projects" onclick="setActive(this)">Projects</a>
+              </li>
+              <li>
+                <a href="#services" onclick="setActive(this)">Services</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -41,47 +47,54 @@
 
     <!-- 主内容 -->
     <main>
-      <!-- About Me -->
       <section style="margin-top: 80px" id="about" class="section about">
         <div class="container about-container card">
-          <div class="about-left">
-            <img src="./img/me.png" alt="Your Photo" class="profile-picture" />
+          <div class="about-top">
+            <div class="about-top-left">
+              <img
+                src="./img/me.png"
+                alt="Your Photo"
+                class="profile-picture"
+              />
+            </div>
+            <div class="about-top-right">
+              <span>Yunming Liao</span><br />
+              <span>PhD student</span>
+              <p>
+                <a
+                  class="about-link"
+                  href="https://cs.ustc.edu.cn/main.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >School of Computer Science and Technology</a
+                >
+              </p>
+              <p>
+                <a
+                  class="about-link"
+                  href="https://www.ustc.edu.cn/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >University of Science and Technology of China (USTC)</a
+                >
+              </p>
+              <p>
+                <a
+                  class="about-link"
+                  href="https://int-ustc.github.io/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >USTC Intelligent Network and System Group (USTC-INT)</a
+                >
+              </p>
+              <p id="email"></p>
+              <p id="researchContent">
+                Research Interests: Edge Intelligence, Federated Learning, Split
+                Federated Learning
+              </p>
+            </div>
           </div>
-          <div class="about-right">
-            <span>Yunming Liao</span><br />
-            <span>PhD student</span>
-            <p>
-              <a
-                class="about-link"
-                href="https://cs.ustc.edu.cn/main.htm"
-                target="_blank"
-                rel="noopener noreferrer"
-                >School of Computer Science and Technology</a
-              >
-            </p>
-            <p>
-              <a
-                class="about-link"
-                href="https://www.ustc.edu.cn/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >University of Science and Technology of China (USTC)</a
-              >
-            </p>
-            <p>
-              <a
-                class="about-link"
-                href="https://int-ustc.github.io/index.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                >USTC Intelligent Network and System Group (USTC-INT)</a
-              >
-            </p>
-            <p id="email"></p>
-            <p id="researchContent">
-              Research Interests: Edge Intelligence, Federated Learning, Split
-              Federated Learning
-            </p>
+          <div class="about-bottom">
             <p id="introduction">
               I'm received B.S. degree in 2020 from the University of Science
               and Technology of China. He is currently pursuing his Ph.D. degree
@@ -96,7 +109,9 @@
               <a id="google" href="" title="Google Scholar"
                 ><i class="fab fa-google"></i
               ></a>
-              <a id="github" href="#" title="Github"><i class="fab fa-github"></i></a>
+              <a id="github" href="#" title="Github"
+                ><i class="fab fa-github"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -104,51 +119,32 @@
 
       <!-- Awards -->
       <section id="awards" class="section awards">
-        <h2><i class="fas fa-trophy"></i> Awards</h2>
-        <div id="awardsContent" class="container grid card">
-          <!-- <div class="card">
-            <div class="card-time"></div>
-            <p style="color: black">
-              <li>2024 Jiaolong First-Class Scholarship</li> 
-            </p>
-          </div> -->
+        <div class="sec-title container">
+          <h2><i class="fas fa-trophy"></i> Awards</h2>
         </div>
+        <div id="awardsContent" class="container grid card"></div>
       </section>
 
       <!-- Publications -->
       <section id="publications" class="section publications">
-        <h2><i class="fas fa-book"></i> Publications</h2>
-        <!-- <h3>Conference Papers</h3> -->
-        <div id="publicationsContent" class="container grid card">
-          <!-- <div class="card">
-            <div class="card-time">[ACM Mobicom'24]</div>
-            <h3>
-              ParallelSFL: A Novel Split Federated Learning Framework Tackling
-              Heterogeneity Issues
-            </h3>
-            <p>
-              <strong style="color: black">Yunming Liao</strong>, *Yang Xu,
-              *Hongli Xu, Zhiwei Yao, Liusheng Huang, Chunming Qiao.
-            </p>
-            <p style="color: #2a9df4">
-              <i>
-                The 30th Annual International Conference On Mobile Computing And
-                Networking (MobiCom), 2024</i
-              >
-            </p>
-          </div> -->
-
+        <div class="sec-title container">
+          <h2><i class="fas fa-book"></i> Publications</h2>
         </div>
+        <div id="publicationsContent" class="container grid card"></div>
       </section>
       <!-- Projects -->
       <section id="projects" class="section projects">
-        <h2><i class="fas fa-flask"></i> Projects</h2>
-        <div id="projectsContent" class="container grid card">
+        <div class="sec-title container">
+          <h2><i class="fas fa-flask"></i> Projects</h2>
+        </div>
+        <div id="projectsContent" class="container grid card"></div>
       </section>
       <!-- Services -->
       <section id="services" class="section services">
-        <h2><i class="fas fa-file-alt"></i> Academic Services</h2>
-        <div id="servicesContent" class="container grid card">
+        <div class="sec-title container">
+          <h2><i class="fas fa-file-alt"></i> Academic Services</h2>
+        </div>
+        <div id="servicesContent" class="container grid card"></div>
       </section>
     </main>
 

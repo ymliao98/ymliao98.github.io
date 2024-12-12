@@ -48,14 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("google").href = introduction["google_scholar"];
   document.getElementById("github").href = introduction["github"];
   document.getElementById("emailLink").href = `mailto:${introduction["email"]}`;
-
-  const awards_content = document.getElementById("awardsContent");
-  for (let award of awards) {
-    for (const [key, value] of Object.entries(award)) {
-      awards_content.appendChild(createItemOfAwards(key, value));
-    }
-  }
-
   const publications_content = document.getElementById("publicationsContent");
   const strongName = "Yunming Liao";
   for (let pub of publications) {
@@ -81,11 +73,44 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+function loadAwards(opt) {
+  const awards_content = document.getElementById("awardsContent");
+  awards_content.innerHTML = "";
+  if (opt) {
+    for (let award of awards) {
+      for (const [key, value] of Object.entries(award)) {
+        awards_content.appendChild(createItemOfAwards(key, value));
+      }
+    }
+  } else {
+    for (let award of awards) {
+      for (const [key, value] of Object.entries(award)) {
+        awards_content.appendChild(createItemOfAwardsMobile(key, value));
+      }
+    }
+  }
+}
+
+let repaint = document.body.clientWidth <= 728 ? false : true;
+function handleResize() {
+  const viewportWidth = document.body.clientWidth;
+  if (viewportWidth < 728 && !repaint) {
+    loadAwards(repaint);
+    repaint = true;
+  } else if (viewportWidth >= 728 && repaint) {
+    loadAwards(repaint);
+    repaint = false;
+  }
+}
+
+window.addEventListener("resize", handleResize);
+window.addEventListener("load", handleResize);
+
 function createItemOfAwards(time, text) {
   // 创建外层容器div
   const containerDiv = document.createElement("div");
   containerDiv.style.display = "flex"; // 使用Flexbox布局
-  containerDiv.style.alignItems = "center"; // 垂直居中
+  // containerDiv.style.alignItems = "center"; // 垂直居中
   containerDiv.style.marginBottom = "10px"; // 每个项之间的间距
 
   // 创建li
@@ -100,7 +125,7 @@ function createItemOfAwards(time, text) {
   // 创建时间部分
   const timeSpan = document.createElement("span");
   timeSpan.className = "card-time";
-  timeSpan.innerText = time;
+  timeSpan.innerText = `${time}`;
 
   // 创建奖项内容部分
   const textSpan = document.createElement("span");
@@ -110,6 +135,41 @@ function createItemOfAwards(time, text) {
   // 将时间和奖项内容添加到内容容器
   contentDiv.appendChild(textSpan);
   contentDiv.appendChild(timeSpan);
+
+  // 将圆点和内容容器添加到外层容器
+  containerDiv.appendChild(dot);
+  containerDiv.appendChild(contentDiv);
+
+  return containerDiv;
+}
+
+function createItemOfAwardsMobile(time, text) {
+  // 创建外层容器div
+  const containerDiv = document.createElement("div");
+  containerDiv.style.display = "flex"; // 使用Flexbox布局
+  // containerDiv.style.alignItems = "center"; // 垂直居中
+  containerDiv.style.marginBottom = "10px"; // 每个项之间的间距
+
+  // 创建li
+  const dot = document.createElement("li");
+
+  // 创建内容部分的容器div
+  const contentDiv = document.createElement("div");
+  contentDiv.style.width = "100%"; // 保证内容区域宽度充满父容器
+
+  // 创建时间部分
+  const timeSpan = document.createElement("span");
+  timeSpan.className = "card-time";
+  timeSpan.innerText = `[${time}]`;
+
+  // 创建奖项内容部分
+  const textSpan = document.createElement("span");
+  textSpan.style.color = "black";
+  textSpan.textContent = text;
+
+  // 将时间和奖项内容添加到内容容器
+  contentDiv.appendChild(timeSpan);
+  contentDiv.appendChild(textSpan);
 
   // 将圆点和内容容器添加到外层容器
   containerDiv.appendChild(dot);
@@ -174,7 +234,7 @@ function createItemOfProjects(proj) {
   containerDiv.style.marginBottom = "10px"; // 每个项之间的间距
   const li = document.createElement("li");
   const div = document.createElement("div");
-  const first_div = document.createElement('div')
+  const first_div = document.createElement("div");
   const name = document.createElement("span");
   name.innerText = proj["name"];
   name.style.color = "black";
@@ -188,9 +248,9 @@ function createItemOfProjects(proj) {
   const time = document.createElement("span");
   time.innerText = `Period:${proj["time"]}`;
   time.style.marginRight = "10px";
-  first_div.appendChild(funding)
+  first_div.appendChild(funding);
   first_div.appendChild(name);
-  div.appendChild(first_div)
+  div.appendChild(first_div);
   div.appendChild(type);
   div.appendChild(time);
   containerDiv.appendChild(li);
@@ -205,11 +265,11 @@ function createItemofService(service) {
   const div = document.createElement("div");
   const type = document.createElement("span");
   type.innerText = `[${service["type"]}]`;
-  type.className = 'card-time'
+  type.className = "card-time";
   const content = document.createElement("span");
-  content.innerText = `${service['name']}`
-  div.appendChild(type)
-  div.appendChild(content)
+  content.innerText = `${service["name"]}`;
+  div.appendChild(type);
+  div.appendChild(content);
   containerDiv.appendChild(li);
   containerDiv.appendChild(div);
   return containerDiv;
