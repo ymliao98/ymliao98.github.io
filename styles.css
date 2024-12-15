@@ -7,7 +7,18 @@ body {
   line-height: 1.4; /* 调整行高，让文本更紧凑 */
   background-color: #ffffff;
 }
-
+#languageSwitchButton {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#languageSwitchButton:hover {
+  background-color: #2980b9;
+}
 /* 容器 */
 .container {
   width: 95%;
@@ -71,7 +82,7 @@ body {
   color: #2a3d66;
 }
 
-.nav-list li.active {
+nav .nav-list li.active {
   background-color: rgba(42, 61, 102, 0.1); /* 点击后的背景色 */
   border-radius: 6px;
 }

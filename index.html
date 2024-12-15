@@ -8,7 +8,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- 导航栏 -->
@@ -21,25 +20,21 @@
             class="school-logo"
           />
         </div>
-        <div class="navbar-toggle" onclick="toggleMenu()">&#9776;</div>
-        <!-- 汉堡菜单按钮 -->
+        <div class="navbar-center">
+          <div id="languageToggle" class="language-toggle">
+            <span class="lang-text" id="langZh">中</span>/<span
+              class="lang-text"
+              id="langEn"
+              >EN</span
+            >
+          </div>
+        </div>
         <div class="navbar-right">
+          <div class="navbar-toggle" onclick="toggleMenu()">&#9776;</div>
+          <!-- 汉堡菜单按钮 -->
+
           <nav>
-            <ul class="nav-list">
-              <li><a href="#about" onclick="setActive(this)">About</a></li>
-              <li><a href="#awards" onclick="setActive(this)">Awards</a></li>
-              <li>
-                <a href="#publications" onclick="setActive(this)"
-                  >Publications</a
-                >
-              </li>
-              <li>
-                <a href="#projects" onclick="setActive(this)">Projects</a>
-              </li>
-              <li>
-                <a href="#services" onclick="setActive(this)">Services</a>
-              </li>
-            </ul>
+            <ul id="nav" class="nav-list"></ul>
           </nav>
         </div>
       </div>
@@ -48,6 +43,9 @@
     <!-- 主内容 -->
     <main>
       <section style="margin-top: 80px" id="about" class="section about">
+        <div class="sec-title container" style="display: none">
+          <h2><i class="fas fa-address-card"></i> About</h2>
+        </div>
         <div class="container about-container card">
           <div class="about-top">
             <div class="about-top-left">
@@ -57,36 +55,38 @@
                 class="profile-picture"
               />
             </div>
-            <div class="about-top-right">
-              <span>Yunming Liao</span><br />
-              <span>PhD student</span>
-              <p>
-                <a
-                  class="about-link"
-                  href="https://cs.ustc.edu.cn/main.htm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >School of Computer Science and Technology</a
-                >
-              </p>
-              <p>
-                <a
-                  class="about-link"
-                  href="https://www.ustc.edu.cn/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >University of Science and Technology of China (USTC)</a
-                >
-              </p>
-              <p>
-                <a
-                  class="about-link"
-                  href="https://int-ustc.github.io/index.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >USTC Intelligent Network and System Group (USTC-INT)</a
-                >
-              </p>
+            <div id="profile" class="about-top-right">
+              <span id="profileName">Yunming Liao</span><br />
+              <span id="profilePosition">Ph.D Candidate</span>
+              <div id="profileCompany">
+                <p>
+                  <a
+                    class="about-link"
+                    href="https://cs.ustc.edu.cn/main.htm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >School of Computer Science and Technology</a
+                  >
+                </p>
+                <p>
+                  <a
+                    class="about-link"
+                    href="https://www.ustc.edu.cn/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >University of Science and Technology of China (USTC)</a
+                  >
+                </p>
+                <p>
+                  <a
+                    class="about-link"
+                    href="https://int-ustc.github.io/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >USTC Intelligent Network and System Group (USTC-INT)</a
+                  >
+                </p>
+              </div>
               <p id="email"></p>
               <p id="researchContent">
                 Research Interests: Edge Intelligence, Federated Learning, Split
@@ -152,11 +152,10 @@
     <footer>
       <p>&copy; 2024 Yunming Liao - All Rights Reserved.</p>
     </footer>
-    <script type="text/javascript" src="./content/introduction.js"></script>
-    <script type="text/javascript" src="./content/awards.js"></script>
-    <script type="text/javascript" src="./content/publications.js"></script>
-    <script type="text/javascript" src="./content/projects.js"></script>
-    <script type="text/javascript" src="./content/services.js"></script>
+    <script type="text/javascript" src="./content/en.js"></script>
+    <script type="text/javascript" src="./content/zh.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="translateBtn.css" />
   </body>
 </html>

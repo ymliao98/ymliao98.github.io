@@ -1,0 +1,49 @@
+.language-toggle {
+  position: fixed;
+  left: 20px; /* 离左边的距离 */
+  bottom: 20px; /* 离底部的距离 */
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 1000; /* 确保它位于页面其他元素之上 */
+  cursor: pointer;
+  color: rgba(154, 154, 154, 0.5);
+}
+
+.lang-text {
+  cursor: pointer;
+}
+
+#langZh {
+  color: rgba(154, 154, 154, 0.5); /* 默认中文为黑色 */
+}
+
+#langEn {
+  color: rgb(0, 115, 255); /* 默认英文为绿色 */
+}
+
+.language-toggle.zh-active #langZh {
+  color: rgb(0, 115, 255); /* 中文选择时，显示绿色 */
+}
+
+.language-toggle.zh-active #langEn {
+  color: rgba(154, 154, 154, 0.5); /* 中文选择时，英文为黑色 */
+}
+
+.language-toggle.en-active #langZh {
+  color: rgba(154, 154, 154, 0.5); /* 英文选择时，中文为黑色 */
+}
+
+.language-toggle.en-active #langEn {
+  color: rgb(0, 115, 255); /* 英文选择时，英文为绿色 */
+}
+
+@media (max-width: 768px) {
+  .language-toggle {
+    position: inherit;
+
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1000; /* 确保它位于页面其他元素之上 */
+    cursor: pointer;
+  }
+}
