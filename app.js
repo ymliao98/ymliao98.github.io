@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 function loadZH() {
-  loadNavAuto("zh");
+  // loadNavAuto("zh");
   loadProfile(about_zh);
-  loadAwards(repaint, awards_zh);
+  loadAwards(document.body.clientWidth <= 728 ? false : true, awards_zh);
   const publications_content = document.getElementById("publicationsContent");
   publications_content.innerHTML = "";
 
@@ -62,9 +62,9 @@ function loadZH() {
 }
 
 function loadEN() {
-  loadNavAuto("en");
+  // loadNavAuto("en");
   loadProfile(about);
-  loadAwards(repaint, awards);
+  loadAwards(document.body.clientWidth <= 728 ? false : true, awards);
   const publications_content = document.getElementById("publicationsContent");
   publications_content.innerHTML = "";
   const strongName = "Yunming Liao";
@@ -94,15 +94,20 @@ function loadEN() {
 }
 
 function loadAwards(opt, awards) {
+  console.log(opt);
+
   const awards_content = document.getElementById("awardsContent");
   awards_content.innerHTML = "";
+  // True:正常
   if (opt) {
     for (let award of awards) {
       for (const [key, value] of Object.entries(award)) {
         awards_content.appendChild(createItemOfAwards(key, value));
       }
     }
-  } else {
+  }
+  // False: 手机版
+  else {
     for (let award of awards) {
       for (const [key, value] of Object.entries(award)) {
         awards_content.appendChild(createItemOfAwardsMobile(key, value));
@@ -236,12 +241,15 @@ function createItemOfAwards(time, text) {
   const timeSpan = document.createElement("span");
   timeSpan.className = "card-time";
   timeSpan.innerText = `${time}`;
-
+  let textSpan;
   // 创建奖项内容部分
-  const textSpan = document.createElement("span");
-  textSpan.style.color = "black";
-  textSpan.textContent = text;
-
+  if (curlang == "zh") {
+    textSpan = highlightBoldWords(text, awards_strong);
+  } else {
+    textSpan = document.createElement("span");
+    textSpan.style.color = "black";
+    textSpan.textContent = text;
+  }
   // 将时间和奖项内容添加到内容容器
   contentDiv.appendChild(textSpan);
   contentDiv.appendChild(timeSpan);
@@ -273,9 +281,14 @@ function createItemOfAwardsMobile(time, text) {
   timeSpan.innerText = `[${time}]`;
 
   // 创建奖项内容部分
-  const textSpan = document.createElement("span");
-  textSpan.style.color = "black";
-  textSpan.textContent = text;
+  let textSpan;
+  if (curlang == "zh") {
+    textSpan = highlightBoldWords(text, awards_strong);
+  } else {
+    textSpan = document.createElement("span");
+    textSpan.style.color = "black";
+    textSpan.textContent = text;
+  }
 
   // 将时间和奖项内容添加到内容容器
   contentDiv.appendChild(timeSpan);
@@ -346,20 +359,33 @@ function createItemOfProjects(proj, lang) {
   const div = document.createElement("div");
   const first_div = document.createElement("div");
   const name = document.createElement("span");
-  name.innerText = proj["name"];
-  name.style.color = "black";
+  // name.style.color = "black";
   const funding = document.createElement("span");
-  funding.innerText = `[${proj["funding"]}]`;
   funding.style.marginRight = "10px";
-  funding.className = "card-time";
+  // funding.className = "card-time";
   const type = document.createElement("span");
-  type.innerText = `${lang == "zh" ? "类型" : "Type"}:${proj["type"]}`;
   type.style.marginRight = "10px";
   const time = document.createElement("span");
-  time.innerText = `${lang == "zh" ? "周期" : "Period"}:${proj["time"]}`;
+  if (lang == "zh") {
+    name.innerText = `项目名称：${proj["name"]}`;
+    funding.innerText = `资助类别：${proj["funding"]}`;
+    funding.style.display = "block";
+    type.innerText = `${"资助金额"}：${proj["type"]}，${"资助年限"}：${
+      proj["time"]
+    }`;
+    first_div.appendChild(name);
+    first_div.appendChild(funding);
+    // time.innerText = `${"资助年限"}:${proj["time"]}`;
+  } else {
+    name.innerText = proj["name"];
+    funding.innerText = `[${proj["funding"]}]`;
+    funding.className = "card-time";
+    type.innerText = `${"Type"}:${proj["type"]}`;
+    time.innerText = `${"Period"}:${proj["time"]}`;
+    first_div.appendChild(funding);
+    first_div.appendChild(name);
+  }
   time.style.marginRight = "10px";
-  first_div.appendChild(funding);
-  first_div.appendChild(name);
   div.appendChild(first_div);
   div.appendChild(type);
   div.appendChild(time);
@@ -394,12 +420,31 @@ function toggleMenu() {
 function handleResize() {
   const viewportWidth = document.body.clientWidth;
   if (viewportWidth < 728 && !repaint) {
-    loadAwards(repaint, curlang == "zh" ? awards_zh : awards);
+    loadAwards(false, curlang == "zh" ? awards_zh : awards);
     repaint = true;
   } else if (viewportWidth >= 728 && repaint) {
-    loadAwards(repaint, curlang == "zh" ? awards_zh : awards);
+    loadAwards(true, curlang == "zh" ? awards_zh : awards);
     repaint = false;
   }
 }
 
 window.addEventListener("resize", handleResize);
+
+function highlightBoldWords(text, boldWords) {
+  // 创建一个 span 元素来包裹最终的文本
+  const textSpan = document.createElement("span");
+  textSpan.style.color = "black"; // 设置文本颜色（可选）
+
+  // 遍历 boldWords 数组，将匹配的词用 <strong> 标签包裹
+  boldWords.forEach((word) => {
+    // 使用正则表达式全局匹配指定的词（防止重复匹配）
+    const regex = new RegExp(word, "g"); // 'g' 表示全局匹配
+    text = text.replace(regex, `<strong>${word}</strong>`);
+  });
+
+  // 设置带有加粗文本的 innerHTML
+  textSpan.innerHTML = text;
+
+  // 返回包含加粗文本的元素
+  return textSpan;
+}

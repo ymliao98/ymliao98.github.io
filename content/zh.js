@@ -3,21 +3,22 @@ const about_zh = {
   position: "博士研究生",
   company: [
     {
-      name: "计算机科学与技术学院",
-      link: "https://cs.ustc.edu.cn/main.htm",
-    },
-    {
       name: "中国科学技术大学 (USTC)",
       link: "https://www.ustc.edu.cn/",
     },
+    {
+      name: "计算机科学与技术学院",
+      link: "https://cs.ustc.edu.cn/main.htm",
+    },
+
     {
       name: "中国科大计算机学院智能网络与系统课题组(USTC-INT)",
       link: "https://int-ustc.github.io/index.html",
     },
   ],
-  research_content: "研究方向:计算机网络, 边缘智能, 联邦大模型",
+  research_content: "研究方向:边缘计算、边缘智能、联邦大模型",
   introduction:
-    "廖云铭目前在中国科技大学计算机科学与技术学院攻读博士学位。他于2020年获得中国科技大学学士学位。他的主要研究兴趣包括物联网、边缘计算、联合学习、边缘智能和联邦大模型。",
+    "廖云铭目前在中国科学技术大学计算机科学与技术学院攻读博士学位。2020年6月本科毕业于中国科学技术大学电子信息工程专业并获得保研名额。目前共发表高水平论文18篇，其中一作/学生一作CCF-A类论文9篇，包括MobiCom, INFOCOM, ICDE, ToN, TMC等顶级国际会议和期刊。",
   email: "邮箱:ymliao98@mail.ustc.edu.cn",
   google_scholar:
     "https://scholar.google.com.hk/citations?user=pKJtH5MAAAAJ&hl=zh-CN",
@@ -35,6 +36,7 @@ const awards_zh = [
   { 2018: "中国科学技术大学RoboGame2018比赛冠军" },
   { 2018: "奋进奖学金" },
 ];
+const awards_strong = ['"蛟龙" 一等奖学金', "国家奖学金", "冠军"];
 
 // 在此处添加论文
 const publications_zh = [
@@ -179,9 +181,9 @@ const publications_zh = [
 const projects_zh = [
   {
     name: "面向弱设备的联邦低秩微调研究",
-    time: "2025-2026",
-    type: "学术研究",
-    funding: "国家自然科学基金",
+    time: "2年",
+    type: "30万",
+    funding: "青年学生基础研究项目（博士研究生）",
   },
 ];
 
@@ -205,7 +207,7 @@ const services_zh = [
 ];
 
 const nav_zh = {
-  about: "关于",
+  about: "简介",
   awards: "奖项",
   publications: "论著",
   projects: "项目",

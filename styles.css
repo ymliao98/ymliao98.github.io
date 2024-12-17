@@ -280,7 +280,7 @@ h2 {
 }
 
 .card-time {
-  font-size: 14px;
+  /* font-size: 14px; */
   font-weight: bold;
   color: #f39c12;
   margin-right: 10px;
