@@ -207,7 +207,9 @@ const loadProfile = (info) => {
     a.className = "about-link";
     a.target = "_blank";
     a.rel = "noopener noreferrer";
-    a.link = item["link"];
+    a.href = item["link"];
+    console.log(a.href);
+
     a.innerText = item["name"];
     p.appendChild(a);
     profile_company.appendChild(p);
