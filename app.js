@@ -355,44 +355,45 @@ function createItemOfPublications(
 
 function createItemOfProjects(proj, lang) {
   const containerDiv = document.createElement("div");
-  containerDiv.style.display = "flex"; // 使用Flexbox布局
-  containerDiv.style.marginBottom = "10px"; // 每个项之间的间距
+  containerDiv.style.display = "flex";
+  containerDiv.style.marginBottom = "10px";
+
   const li = document.createElement("li");
   const div = document.createElement("div");
-  const first_div = document.createElement("div");
+  const firstDiv = document.createElement("div");
+
   const name = document.createElement("span");
-  // name.style.color = "black";
   const funding = document.createElement("span");
-  funding.style.marginRight = "10px";
-  // funding.className = "card-time";
   const type = document.createElement("span");
+
+  funding.style.marginRight = "10px";
   type.style.marginRight = "10px";
-  const time = document.createElement("span");
-  if (lang == "zh") {
-    name.innerText = `项目名称：${proj["name"]}`;
-    funding.innerText = `资助类别：${proj["funding"]}`;
-    funding.style.display = "block";
-    type.innerText = `${"资助金额"}：${proj["type"]}，${"资助年限"}：${
-      proj["time"]
-    }`;
-    first_div.appendChild(name);
-    first_div.appendChild(funding);
-    // time.innerText = `${"资助年限"}:${proj["time"]}`;
+
+  name.textContent = proj.name;
+
+  if (lang === "zh") {
+    name.style.display = "block";
+    type.textContent = proj.type ? `${proj.type}，${proj.time}` : proj.time;
+
+    firstDiv.append(name);
+    if (proj.funding) {
+      funding.textContent = proj.funding;
+      funding.style.display = "block";
+      firstDiv.append(funding);
+    }
+    firstDiv.append(type);
   } else {
-    name.innerText = proj["name"];
-    funding.innerText = `[${proj["funding"]}]`;
-    funding.className = "card-time";
-    type.innerText = `${"Type"}:${proj["type"]}`;
-    time.innerText = `${"Period"}:${proj["time"]}`;
-    first_div.appendChild(funding);
-    first_div.appendChild(name);
+    if (proj.funding) {
+      funding.textContent = `[${proj.funding}]`;
+      funding.className = "card-time";
+      firstDiv.append(funding);
+    }
+    firstDiv.append(name);
   }
-  time.style.marginRight = "10px";
-  div.appendChild(first_div);
-  div.appendChild(type);
-  div.appendChild(time);
-  containerDiv.appendChild(li);
-  containerDiv.appendChild(div);
+
+  div.append(firstDiv);
+  containerDiv.append(li, div);
+
   return containerDiv;
 }
 function createItemofService(service) {

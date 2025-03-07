@@ -18,7 +18,7 @@ const about_zh = {
   ],
   research_content: "研究方向:边缘计算、边缘智能、联邦大模型",
   introduction:
-    "廖云铭目前在中国科学技术大学计算机科学与技术学院攻读博士学位。2020年6月本科毕业于中国科学技术大学电子信息工程专业并获得保研名额。目前共发表高水平论文17篇，其中一作/学生一作CCF-A类论文9篇，包括MobiCom, INFOCOM, ICDE, ToN, TMC等顶级国际会议和期刊。",
+    "廖云铭目前在中国科学技术大学计算机科学与技术学院攻读博士学位。2020年6月本科毕业于中国科学技术大学电子信息工程专业并获得保研名额。目前共发表高水平论文19篇，其中一作/学生一作CCF-A类论文9篇，包括MobiCom, INFOCOM, ICDE, ToN, TMC等顶级国际会议和期刊。",
   email: "邮箱:ymliao98@mail.ustc.edu.cn",
   google_scholar:
     "https://scholar.google.com.hk/citations?user=pKJtH5MAAAAJ&hl=zh-CN",
@@ -26,7 +26,6 @@ const about_zh = {
 };
 const awards_zh = [
   // Year: Awards
-  { 2024: "2024年度中国科协青年人才托举工程博士生专项计划（首批）" },
   { 2024: '"蛟龙" 一等奖学金' },
   { 2024: "博士研究生国家奖学金" },
   { 2023: "苏州育才奖学金" },
@@ -41,6 +40,20 @@ const awards_strong = ['"蛟龙" 一等奖学金', "国家奖学金", "冠军"];
 
 // 在此处添加论文
 const publications_zh = [
+  {
+    paper:
+      "Enhancing Federated Learning through Layer-wise Aggregation over Non-IID Data",
+    authors: "Yang Xu, Ying Zhu, Zhiyuan Wang, *Hongli Xu, Yunming Liao",
+    publisher: "Transactions on Services Computing (TSC), 2025",
+    level: `[TSC'25, CCF A]`,
+  },
+  {
+    paper:
+      "PairingFL: Efficient Federated Learning with Model Splitting and Client Pairing",
+    authors: "Zhiwei Yao, Ji Qi, *Yang Xu, Yunming Liao, Hongli Xu, Lun Wang",
+    publisher: "IEEE/ACM Transactions on Networking (ToN), 2025",
+    level: `[ToN'25, CCF A]`,
+  },
   {
     paper:
       "ParallelSFL: A Novel Split Federated Learning Framework Tackling Heterogeneity Issues",
@@ -181,11 +194,17 @@ const publications_zh = [
 
 const projects_zh = [
   {
-    name: "面向弱设备的联邦低秩微调研究",
-    time: "2年",
-    type: "30万",
-    funding: "青年学生基础研究项目（博士研究生）",
+    name: "项目名称：面向弱设备的联邦低秩微调研究",
+    time: "资助年限: 2年",
+    type: "资助金额: 30万",
+    funding: "资助类别：青年学生基础研究项目（博士研究生）",
   },
+  {
+    name: "项目名称：2024年度中国科协青年人才托举工程博士生专项计划",
+    time: "托举期：2年",
+    type: "",
+    funding: "托举学会：中国电子学会",
+  }
 ];
 
 const services_zh = [

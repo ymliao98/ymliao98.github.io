@@ -41,6 +41,20 @@ const awards = [
 const publications = [
   {
     paper:
+      "Enhancing Federated Learning through Layer-wise Aggregation over Non-IID Data",
+    authors: "Yang Xu, Ying Zhu, Zhiyuan Wang, *Hongli Xu, Yunming Liao",
+    publisher: "Transactions on Services Computing (TSC), 2025",
+    level: `[TSC'25, CCF A]`,
+  },
+  {
+    paper:
+      "PairingFL: Efficient Federated Learning with Model Splitting and Client Pairing",
+    authors: "Zhiwei Yao, Ji Qi, *Yang Xu, Yunming Liao, Hongli Xu, Lun Wang",
+    publisher: "IEEE/ACM Transactions on Networking (ToN), 2025",
+    level: `[ToN'25, CCF A]`,
+  },
+  {
+    paper:
       "ParallelSFL: A Novel Split Federated Learning Framework Tackling Heterogeneity Issues",
     authors:
       "Yunming Liao, Yang Xu, Hongli Xu, Zhiwai Yao, Liusheng Huang, Chunming Qiao",
@@ -179,10 +193,12 @@ const publications = [
 
 const projects = [
   {
-    name: "Research on Federated Low-Rank Fine-Tuning for End Devices with Limited Resources",
-    time: "2025-2026",
-    type: "Research",
+    name: "Research on Federated Low-Rank Fine-Tuning for End Devices with Limited Resources Type:Research Period:2025-2026",
     funding: "NSFC",
+  },
+  {
+    name: "2024 Young Talent Support Project Doctoral Program by Chinese Institute of Electronics",
+    funding: "",
   },
 ];
 
