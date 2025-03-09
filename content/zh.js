@@ -42,20 +42,6 @@ const awards_strong = ['"蛟龙" 一等奖学金', "国家奖学金", "冠军"];
 const publications_zh = [
   {
     paper:
-      "Enhancing Federated Learning through Layer-wise Aggregation over Non-IID Data",
-    authors: "Yang Xu, Ying Zhu, Zhiyuan Wang, *Hongli Xu, Yunming Liao",
-    publisher: "Transactions on Services Computing (TSC), 2025",
-    level: `[TSC'25, CCF A]`,
-  },
-  {
-    paper:
-      "PairingFL: Efficient Federated Learning with Model Splitting and Client Pairing",
-    authors: "Zhiwei Yao, Ji Qi, *Yang Xu, Yunming Liao, Hongli Xu, Lun Wang",
-    publisher: "IEEE/ACM Transactions on Networking (ToN), 2025",
-    level: `[ToN'25, CCF A]`,
-  },
-  {
-    paper:
       "ParallelSFL: A Novel Split Federated Learning Framework Tackling Heterogeneity Issues",
     authors:
       "Yunming Liao, Yang Xu, Hongli Xu, Zhiwai Yao, Liusheng Huang, Chunming Qiao",
@@ -127,6 +113,20 @@ const publications_zh = [
       "Yang Xu, Yunming Liao, *Hongli Xu, Zhiyuan Wang, Lun Wang, Jianchun Liu, Chen Qian",
     publisher: "IEEE/ACM Transactions on Networking (ToN), 2024",
     level: `[ToN'24, CCF A]`,
+  },
+  {
+    paper:
+      "Enhancing Federated Learning through Layer-wise Aggregation over Non-IID Data",
+    authors: "Yang Xu, Ying Zhu, Zhiyuan Wang, *Hongli Xu, Yunming Liao",
+    publisher: "Transactions on Services Computing (TSC), 2025",
+    level: `[TSC'25, CCF A]`,
+  },
+  {
+    paper:
+      "PairingFL: Efficient Federated Learning with Model Splitting and Client Pairing",
+    authors: "Zhiwei Yao, Ji Qi, *Yang Xu, Yunming Liao, Hongli Xu, Lun Wang",
+    publisher: "IEEE/ACM Transactions on Networking (ToN), 2025",
+    level: `[ToN'25, CCF A]`,
   },
   {
     paper:
@@ -204,7 +204,7 @@ const projects_zh = [
     time: "托举期：2年",
     type: "",
     funding: "托举学会：中国电子学会",
-  }
+  },
 ];
 
 const services_zh = [

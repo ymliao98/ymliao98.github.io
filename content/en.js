@@ -41,20 +41,6 @@ const awards = [
 const publications = [
   {
     paper:
-      "Enhancing Federated Learning through Layer-wise Aggregation over Non-IID Data",
-    authors: "Yang Xu, Ying Zhu, Zhiyuan Wang, *Hongli Xu, Yunming Liao",
-    publisher: "Transactions on Services Computing (TSC), 2025",
-    level: `[TSC'25, CCF A]`,
-  },
-  {
-    paper:
-      "PairingFL: Efficient Federated Learning with Model Splitting and Client Pairing",
-    authors: "Zhiwei Yao, Ji Qi, *Yang Xu, Yunming Liao, Hongli Xu, Lun Wang",
-    publisher: "IEEE/ACM Transactions on Networking (ToN), 2025",
-    level: `[ToN'25, CCF A]`,
-  },
-  {
-    paper:
       "ParallelSFL: A Novel Split Federated Learning Framework Tackling Heterogeneity Issues",
     authors:
       "Yunming Liao, Yang Xu, Hongli Xu, Zhiwai Yao, Liusheng Huang, Chunming Qiao",
@@ -126,6 +112,20 @@ const publications = [
       "Yang Xu, Yunming Liao, *Hongli Xu, Zhiyuan Wang, Lun Wang, Jianchun Liu, Chen Qian",
     publisher: "IEEE/ACM Transactions on Networking (ToN), 2024",
     level: `[ToN'24, CCF A]`,
+  },
+  {
+    paper:
+      "Enhancing Federated Learning through Layer-wise Aggregation over Non-IID Data",
+    authors: "Yang Xu, Ying Zhu, Zhiyuan Wang, *Hongli Xu, Yunming Liao",
+    publisher: "Transactions on Services Computing (TSC), 2025",
+    level: `[TSC'25, CCF A]`,
+  },
+  {
+    paper:
+      "PairingFL: Efficient Federated Learning with Model Splitting and Client Pairing",
+    authors: "Zhiwei Yao, Ji Qi, *Yang Xu, Yunming Liao, Hongli Xu, Lun Wang",
+    publisher: "IEEE/ACM Transactions on Networking (ToN), 2025",
+    level: `[ToN'25, CCF A]`,
   },
   {
     paper:
