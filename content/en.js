@@ -26,6 +26,7 @@ const about = {
 };
 const awards = [
   // Year: Awards
+  { 2025: 'Chinese Academy of Sciences President Award (Special Award)' },
   { 2024: '"Jiao Long" First-Class Scholarship' },
   { 2024: "Doctoral National Postgraduate Scholarship" },
   { 2023: "Suzhou Yucai Scholarship" },

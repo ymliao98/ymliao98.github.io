@@ -26,6 +26,7 @@ const about_zh = {
 };
 const awards_zh = [
   // Year: Awards
+  { 2025: '中国科学院院长奖（特别奖）' },
   { 2024: '"蛟龙" 一等奖学金' },
   { 2024: "博士研究生国家奖学金" },
   { 2023: "苏州育才奖学金" },
@@ -36,7 +37,7 @@ const awards_zh = [
   { 2018: "中国科学技术大学RoboGame2018比赛冠军" },
   { 2018: "奋进奖学金" },
 ];
-const awards_strong = ['"蛟龙" 一等奖学金', "国家奖学金", "冠军"];
+const awards_strong = ['中国科学院院长奖（特别奖）','"蛟龙" 一等奖学金', "国家奖学金", "冠军"];
 
 // 在此处添加论文
 const publications_zh = [
