@@ -18,7 +18,7 @@ const about_zh = {
   ],
   research_content: "研究方向:边缘计算、边缘智能、联邦大模型",
   introduction:
-    "廖云铭目前在中国科学技术大学计算机科学与技术学院攻读博士学位。2020年6月本科毕业于中国科学技术大学电子信息工程专业并获得保研名额。目前共发表高水平论文22篇，其中一作/学生一作CCF-A类论文10篇，包括MobiCom, INFOCOM, ICDE, ToN, TMC等顶级国际会议和期刊。",
+    "廖云铭目前在中国科学技术大学计算机科学与技术学院攻读博士学位。2020年6月本科毕业于中国科学技术大学电子信息工程专业并获得保研名额。目前共发表高水平论文22篇，其中一作/学生一作CCF-A类论文10篇，包括MobiCom, INFOCOM, ICDE, ToN, TMC, JSAC等顶级国际会议和期刊。",
   email: "邮箱:ymliao98@mail.ustc.edu.cn",
   google_scholar:
     "https://scholar.google.com.hk/citations?user=pKJtH5MAAAAJ&hl=zh-CN",
