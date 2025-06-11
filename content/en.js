@@ -26,7 +26,7 @@ const about = {
 };
 const awards = [
   // Year: Awards
-  { 2025: 'CAS Presidential Scholarship(Special Prize)' },
+  { 2025: "CAS Presidential Scholarship(Special Prize)" },
   { 2024: '"Jiao Long" First-Class Scholarship' },
   { 2024: "Doctoral National Postgraduate Scholarship" },
   { 2023: "Suzhou Yucai Scholarship" },
@@ -89,6 +89,14 @@ const publications = [
       "Yunming Liao, *Yang Xu, Hongli Xu, Lun Wang, Chen Qian, Chunming Qiao",
     publisher: "IEEE Transactions on Mobile Computing (TMC), 2023",
     level: `[TMC'23, CCF A]`,
+  },
+  {
+    paper:
+      "Enhancing Split Federated Learning with Worker Clustering and Feature Compression",
+    authors:
+      "Yang Xu, Yunming Liao, Hongli Xu, Zhiwai Yao, Junhao Cheng, Chunming Qiao",
+    publisher: "IEEE Journal on Selected Areas in Communications (JSAC), 2025",
+    level: `[JSAC'25, CCF A]`,
   },
   {
     paper:
@@ -167,6 +175,22 @@ const publications = [
       "Jianchun Liu, *Yang Xu, *Hongli Xu, Yunming Liao, Zhiyuan Wang, He Huang",
     publisher: "IEEE International Conference on Data Engineering (ICDE), 2022",
     level: `[ICDE'22, CCF A]`,
+  },
+  {
+    paper:
+      "MPLS: Stacking Diverse Layers into One Model for Decentralized Federated Learning",
+    authors: "Yang Xu, Zhiwei Yao, *Hongli Xu, Yunming Liao, Zuan Xie",
+    publisher:
+      "The 31st International European Conference on Parallel and Distributed Computing (Euro-Par), 2025",
+    level: `[Euro-Par'25, CCF B]`,
+  },
+  {
+    paper:
+      "Towards layer-wise quantization for heterogeneous federated clients",
+    authors:
+      "Yang Xu, Junhao Cheng, *Hongli Xu, Changyu Guo, Yunming Liao, Zhiwei Yao",
+    publisher: "Computer Networks (ComNet), 2025",
+    level: `[ComNet'25, CCF B]`,
   },
   {
     paper:

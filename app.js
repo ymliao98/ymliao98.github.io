@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 function loadZH() {
   // loadNavAuto("zh");
+  
   loadProfile(about_zh);
   loadAwards(document.body.clientWidth <= 728 ? false : true, awards_zh);
   const publications_content = document.getElementById("publicationsContent");
@@ -208,7 +209,7 @@ const loadProfile = (info) => {
     a.target = "_blank";
     a.rel = "noopener noreferrer";
     a.href = item["link"];
-    console.log(a.href);
+    // console.log(a.href);
 
     a.innerText = item["name"];
     p.appendChild(a);

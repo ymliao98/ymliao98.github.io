@@ -18,15 +18,16 @@ const about_zh = {
   ],
   research_content: "研究方向:边缘计算、边缘智能、联邦大模型",
   introduction:
-    "廖云铭目前在中国科学技术大学计算机科学与技术学院攻读博士学位。2020年6月本科毕业于中国科学技术大学电子信息工程专业并获得保研名额。目前共发表高水平论文19篇，其中一作/学生一作CCF-A类论文9篇，包括MobiCom, INFOCOM, ICDE, ToN, TMC等顶级国际会议和期刊。",
+    "廖云铭目前在中国科学技术大学计算机科学与技术学院攻读博士学位。2020年6月本科毕业于中国科学技术大学电子信息工程专业并获得保研名额。目前共发表高水平论文22篇，其中一作/学生一作CCF-A类论文10篇，包括MobiCom, INFOCOM, ICDE, ToN, TMC等顶级国际会议和期刊。",
   email: "邮箱:ymliao98@mail.ustc.edu.cn",
   google_scholar:
     "https://scholar.google.com.hk/citations?user=pKJtH5MAAAAJ&hl=zh-CN",
   github: "https://github.com/ymliao98",
 };
+
 const awards_zh = [
   // Year: Awards
-  { 2025: '中国科学院院长特别奖' },
+  { 2025: "中国科学院院长特别奖" },
   { 2024: '"蛟龙" 一等奖学金' },
   { 2024: "博士研究生国家奖学金" },
   { 2023: "苏州育才奖学金" },
@@ -37,7 +38,12 @@ const awards_zh = [
   { 2018: "中国科学技术大学RoboGame2018比赛冠军" },
   { 2018: "奋进奖学金" },
 ];
-const awards_strong = ['中国科学院院长特别奖','"蛟龙" 一等奖学金', "国家奖学金", "冠军"];
+const awards_strong = [
+  "中国科学院院长特别奖",
+  '"蛟龙" 一等奖学金',
+  "国家奖学金",
+  "冠军",
+];
 
 // 在此处添加论文
 const publications_zh = [
@@ -90,6 +96,14 @@ const publications_zh = [
       "Yunming Liao, *Yang Xu, Hongli Xu, Lun Wang, Chen Qian, Chunming Qiao",
     publisher: "IEEE Transactions on Mobile Computing (TMC), 2023",
     level: `[TMC'23, CCF A]`,
+  },
+  {
+    paper:
+      "Enhancing Split Federated Learning with Worker Clustering and Feature Compression",
+    authors:
+      "Yang Xu, Yunming Liao, Hongli Xu, Zhiwai Yao, Junhao Cheng, Chunming Qiao",
+    publisher: "IEEE Journal on Selected Areas in Communications (JSAC), 2025",
+    level: `[JSAC'25, CCF A]`,
   },
   {
     paper:
@@ -168,6 +182,22 @@ const publications_zh = [
       "Jianchun Liu, *Yang Xu, *Hongli Xu, Yunming Liao, Zhiyuan Wang, He Huang",
     publisher: "IEEE International Conference on Data Engineering (ICDE), 2022",
     level: `[ICDE'22, CCF A]`,
+  },
+  {
+    paper:
+      "MPLS: Stacking Diverse Layers into One Model for Decentralized Federated Learning",
+    authors: "Yang Xu, Zhiwei Yao, *Hongli Xu, Yunming Liao, Zuan Xie",
+    publisher:
+      "The 31st International European Conference on Parallel and Distributed Computing (Euro-Par), 2025",
+    level: `[Euro-Par'25, CCF B]`,
+  },
+  {
+    paper:
+      "Towards layer-wise quantization for heterogeneous federated clients",
+    authors:
+      "Yang Xu, Junhao Cheng, *Hongli Xu, Changyu Guo, Yunming Liao, Zhiwei Yao",
+    publisher: "Computer Networks (ComNet), 2025",
+    level: `[ComNet'25, CCF B]`,
   },
   {
     paper:
