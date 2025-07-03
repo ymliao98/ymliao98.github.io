@@ -193,6 +193,14 @@ const publications_zh = [
   },
   {
     paper:
+      "LOGO-CL:Accelerating Semi-Supervised Federated Learning in Edge Computing",
+    authors:
+      "Yang Xu, Qianshu Wang, *Hongli Xu, Yunming Liao, Liusheng Huang, Xin Hang",
+    publisher: "Computer Networks (ComNet), 2025",
+    level: `[ComNet'25, CCF B]`,
+  },
+  {
+    paper:
       "Towards layer-wise quantization for heterogeneous federated clients",
     authors:
       "Yang Xu, Junhao Cheng, *Hongli Xu, Changyu Guo, Yunming Liao, Zhiwei Yao",

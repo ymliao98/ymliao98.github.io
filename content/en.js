@@ -26,9 +26,9 @@ const about = {
 };
 const awards = [
   // Year: Awards
-  { 2025: "CAS Presidential Scholarship(Special Prize)" },
+  { 2025: "CAS Presidential Scholarship (Special Prize)" },
   { 2024: '"Jiao Long" First-Class Scholarship' },
-  { 2024: "Doctoral National Postgraduate Scholarship" },
+  { 2024: "PhD National Scholarship" },
   { 2023: "Suzhou Yucai Scholarship" },
   { 2022: "Master's National Scholarship" },
   { 2022: "Suzhou Industrial Park Scholarship" },
@@ -183,6 +183,14 @@ const publications = [
     publisher:
       "The 31st International European Conference on Parallel and Distributed Computing (Euro-Par), 2025",
     level: `[Euro-Par'25, CCF B]`,
+  },
+  {
+    paper:
+      "LOGO-CL:Accelerating Semi-Supervised Federated Learning in Edge Computing",
+    authors:
+      "Yang Xu, Qianshu Wang, *Hongli Xu, Yunming Liao, Liusheng Huang, Xin Hang",
+    publisher: "Computer Networks (ComNet), 2025",
+    level: `[ComNet'25, CCF B]`,
   },
   {
     paper:
