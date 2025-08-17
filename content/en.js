@@ -124,6 +124,14 @@ const publications = [
   },
   {
     paper:
+      "Adaptive Parameter-Efficient Federated Fine-Tuning on Heterogeneous Devices",
+    authors:
+      "Jun Liu, Yunming Liao, *Hongli Xu, Yang Xu, Jianchun Liu, Chen Qian",
+    publisher: "IEEE Transactions on Mobile Computing (TMC), 2025",
+    level: `[TMC'25, CCF A]`,
+  },
+  {
+    paper:
       "Enhancing Federated Learning through Layer-wise Aggregation over Non-IID Data",
     authors: "Yang Xu, Ying Zhu, Zhiyuan Wang, *Hongli Xu, Yunming Liao",
     publisher: "Transactions on Services Computing (TSC), 2025",
