@@ -29,11 +29,11 @@ const awards_zh = [
   // Year: Awards
   { 2025: "中国科学院院长特别奖" },
   { 2024: '"蛟龙" 一等奖学金' },
-  { 2024: "博士研究生国家奖学金" },
+  { "2024-2025": "博士研究生国家奖学金" },
   { 2023: "苏州育才奖学金" },
   { 2022: "硕士研究生国家奖学金" },
   { 2022: "苏州工业园区奖学金" },
-  { "2022-2024": "博士一等学业奖学金" },
+  { "2022-2025": "博士一等学业奖学金" },
   { "2020-2021": "硕士一等学业奖学金" },
   { 2018: "中国科学技术大学RoboGame2018比赛冠军" },
   { 2018: "奋进奖学金" },
@@ -139,6 +139,22 @@ const publications_zh = [
   },
   {
     paper:
+      "Heterogeneity-aware Federated Meta Learning for Personalized Edge Devices",
+    authors:
+      "Ying Zhu, Yang Xu, *Hongli Xu, Yunming Liao, Zhiwei Yao, Liusheng Huang",
+    publisher: "IEEE Transactions on Mobile Computing (TMC), 2025",
+    level: `[TMC'25, CCF A]`,
+  },
+  {
+    paper:
+      "Lightweight and Post-Training Structured Pruning for On-Device Large Language Models",
+    authors:
+      "Zihuai Xu, *Yang Xu, Hongli Xu, Yunming Liao, Zhiwei Yao, Zuan Xie",
+    publisher: "IEEE Transactions on Mobile Computing (TMC), 2025",
+    level: `[TMC'25, CCF A]`,
+  },
+  {
+    paper:
       "Enhancing Federated Learning through Layer-wise Aggregation over Non-IID Data",
     authors: "Yang Xu, Ying Zhu, Zhiyuan Wang, *Hongli Xu, Yunming Liao",
     publisher: "Transactions on Services Computing (TSC), 2025",
@@ -214,6 +230,14 @@ const publications_zh = [
       "Yang Xu, Junhao Cheng, *Hongli Xu, Changyu Guo, Yunming Liao, Zhiwei Yao",
     publisher: "Computer Networks (ComNet), 2025",
     level: `[ComNet'25, CCF B]`,
+  },
+  {
+    paper:
+      "Federated Fine-Tuning on Heterogeneous Devices with Adaptive Quantization and LoRA depths",
+    authors:
+      "Qianshu Wang, *Yang Xu, Hongli Xu, Liusheng Huang, Yunming Liao, Jun Liu",
+    publisher: "IEEE ICPADS 2025",
+    level: `[ICPADS'25, CCF C]`,
   },
   {
     paper:

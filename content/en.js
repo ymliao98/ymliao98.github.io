@@ -28,11 +28,11 @@ const awards = [
   // Year: Awards
   { 2025: "CAS Presidential Scholarship (Special Prize)" },
   { 2024: '"Jiao Long" First-Class Scholarship' },
-  { 2024: "PhD National Scholarship" },
+  { "2024-2025": "PhD National Scholarship" },
   { 2023: "Suzhou Yucai Scholarship" },
   { 2022: "Master's National Scholarship" },
   { 2022: "Suzhou Industrial Park Scholarship" },
-  { "2022-2024": "Doctoral first-class academic scholarship" },
+  { "2022-2025": "Doctoral first-class academic scholarship" },
   { "2020-2021": "Master's first-class academic scholarship" },
   { 2018: "Champion of RobeGame 2018 Competition of USTC" },
   { 2018: "Endeavor Scholarship" },
@@ -132,6 +132,22 @@ const publications = [
   },
   {
     paper:
+      "Heterogeneity-aware Federated Meta Learning for Personalized Edge Devices",
+    authors:
+      "Ying Zhu, Yang Xu, *Hongli Xu, Yunming Liao, Zhiwei Yao, Liusheng Huang",
+    publisher: "IEEE Transactions on Mobile Computing (TMC), 2025",
+    level: `[TMC'25, CCF A]`,
+  },
+  {
+    paper:
+      "Lightweight and Post-Training Structured Pruning for On-Device Large Language Models",
+    authors:
+      "Zihuai Xu, *Yang Xu, Hongli Xu, Yunming Liao, Zhiwei Yao, Zuan Xie",
+    publisher: "IEEE Transactions on Mobile Computing (TMC), 2025",
+    level: `[TMC'25, CCF A]`,
+  },
+  {
+    paper:
       "Enhancing Federated Learning through Layer-wise Aggregation over Non-IID Data",
     authors: "Yang Xu, Ying Zhu, Zhiyuan Wang, *Hongli Xu, Yunming Liao",
     publisher: "Transactions on Services Computing (TSC), 2025",
@@ -207,6 +223,13 @@ const publications = [
       "Yang Xu, Junhao Cheng, *Hongli Xu, Changyu Guo, Yunming Liao, Zhiwei Yao",
     publisher: "Computer Networks (ComNet), 2025",
     level: `[ComNet'25, CCF B]`,
+  },
+  {
+    paper:
+      "Federated Fine-Tuning on Heterogeneous Devices with Adaptive Quantization and LoRA depths",
+    authors: "Qianshu Wang, *Yang Xu, Hongli Xu, Liusheng Huang, Yunming Liao, Jun Liu",
+    publisher: "IEEE ICPADS 2025",
+    level: `[ICPADS'25, CCF C]`,
   },
   {
     paper:
